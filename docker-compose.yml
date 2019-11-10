@@ -1,0 +1,17 @@
+transmission-server:
+  ports:
+    - "51413:51413"
+    - "51413:51413/udp"
+    - "9091:9091"
+
+  image: linuxserver/transmission
+
+  volumes:
+    - /watch:/watch
+    - /downloads:/downloads
+    - /config:/config
+
+  container_name: transmission
+
+  restart: always
+
